@@ -5,6 +5,7 @@ import com.example.project.model.Account;
 import com.example.project.model.User;
 import com.example.project.repository.AccountRepository;
 import com.example.project.repository.UserRepository;
+import com.example.project.services.form.ContactForm;
 import com.example.project.services.form.SignUpForm;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -34,6 +35,5 @@ public class UserService {
         user.setPassword(passwordEncoder.encode(form.getPassword()));
         return userRepository.save(user);
     }
-
 
 }
