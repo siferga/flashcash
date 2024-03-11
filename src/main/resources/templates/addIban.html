@@ -1,0 +1,51 @@
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" data-bs-theme="auto">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>SignUp - Register Form</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<main>
+    <div class="container register">
+        <div class="row">
+            <div class="col-md-3 register-left">
+                <img src="images/feuille.jpg" alt=""/>
+                <h3>Add an IBAN</h3>
+                <p> You can add an Iban</p>
+            </div>
+            <div class="col-md-9 register-right">
+                <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                    <h3 class="register-heading">Add your iban</h3>
+                    <div class="row register-form">
+                        <form th:action="@{/addIban}" th:object="${addIbanForm}" method="GET">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="ibanInput" class="form-label"></label>
+                                    <input type="text" th:name="*{iban}" class="form-control" placeholder="Enter IBAN" required/>
+                                    <input type="text" th:name="iban" class="form-control" id="ibanInput" placeholder="Enter IBAN" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox">I agree to the license terms.</label></div>
+                                </div>
+                                <input type="submit" class="btn"  value="Add Iban"/>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+</main>
+
+</html>
+
+
+
