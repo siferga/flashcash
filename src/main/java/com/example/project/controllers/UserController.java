@@ -26,29 +26,28 @@ public class UserController {
     public ModelAndView home(Model model) {
         return new ModelAndView("index");
     }
+    @GetMapping ("/home")
+    public String logOff(){
+        return "home";
+    }
+    @GetMapping ("/logOut")
+    public String logOut(){
+        return "signin";
+    }
 
+    /*********************************** SIGNUP FORM ******************************************/
     @PostMapping("/signup")
     public ModelAndView processRequest(@ModelAttribute("signUpForm")SignUpForm form) {
         userService.registration(form);
         return new ModelAndView("signin");
     }
-
     @GetMapping ("/signup")
     public ModelAndView showRegisterForm() {
         return new ModelAndView("signup","signUpForm",new SignUpForm());
     }
 
-    @GetMapping ("/home")
-    public String logOff(){
-        return "home";
-    }
-    @GetMapping ("/addIban")
-    public ModelAndView addIbanForm()
-    { return new  ModelAndView("addIban","addIbanForm", new AddIbanForm()); }
-    @GetMapping ("/logOut")
-    public String logOut(){
-        return "signin";
-    }
+
+    /*********************************** CONTACT FORM ******************************************/
     @PostMapping("/contactForm")
     public ModelAndView contactForm(@ModelAttribute("contactForm") ContactForm form) {
         messageService.submitContactForm(form);
