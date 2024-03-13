@@ -17,12 +17,8 @@ public class Message {
     private String email;
     private String message;
 
-    // Constructeurs, getters, setters, etc.
-
-    // Constructeur par défaut
     public Message() {}
 
-    // Constructeur avec paramètres
     public Message(String name, String email, String message) {
         this.name = name;
         this.email = email;
@@ -60,8 +56,6 @@ public class Message {
     public void setMessage(String message) {
         this.message = message;
     }
-
-    // Getters et setters
 
 
 }
