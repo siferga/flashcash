@@ -6,4 +6,11 @@ import lombok.Data;
 public class AddIbanForm {
     private String iban;
 
+    public void setIban(String iban) {
+        this.iban = iban;
+    }
+
+    public String getIban() {
+        return iban;
+    }
 }
