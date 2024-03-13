@@ -3,7 +3,9 @@ package com.example.project.services;
 import com.example.project.model.User;
 import com.example.project.repository.UserRepository;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.stereotype.Service;
 
+@Service
 public class SessionService {
     private final UserRepository userRepository;
     /*constructor initialises SessionService with an UserRepo instance */
