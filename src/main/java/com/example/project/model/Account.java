@@ -15,6 +15,32 @@ public class Account {
     private Integer accountId;
     private Double amount;
     private String iban;
+    public void setAmount(double account) {
+    }
+
+    public Integer getAccountId() {
+        return accountId;
+    }
+
+    public void setAccountId(Integer accountId) {
+        this.accountId = accountId;
+    }
+
+    public Double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(Double amount) {
+        this.amount = amount;
+    }
+
+    public String getIban() {
+        return iban;
+    }
+
+    public void setIban(String iban) {
+        this.iban = iban;
+    }
 
     public Account plus(double amount){
         this.amount +=amount;
@@ -25,6 +51,5 @@ public class Account {
         return this;
     }
 
-    public void setAmount(double account) {
-    }
+
 }
